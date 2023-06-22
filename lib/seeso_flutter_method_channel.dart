@@ -9,9 +9,4 @@ class MethodChannelSeesoFlutter extends SeesoFlutterPlatform {
   @visibleForTesting
   final methodChannel = const MethodChannel('seeso_flutter');
 
-  @override
-  Future<String?> getPlatformVersion() async {
-    final version = await methodChannel.invokeMethod<String>('getPlatformVersion');
-    return version;
-  }
 }
