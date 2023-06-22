@@ -1,5 +1,6 @@
 package com.eightgroup.seeso_flutter
 
+import camp.visual.gazetracker.GazeTracker
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
@@ -17,6 +18,7 @@ class SeesoFlutterPlugin: FlutterPlugin, MethodCallHandler {
 
   override fun onMethodCall(call: MethodCall, result: Result) {
     when(call.method){
+      "getSeeSoVersion" -> GazeTracker.getVersionName()
       else -> result.notImplemented()
     }
   }

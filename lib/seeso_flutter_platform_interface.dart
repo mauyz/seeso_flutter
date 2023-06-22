@@ -23,4 +23,7 @@ abstract class SeesoFlutterPlatform extends PlatformInterface {
     _instance = instance;
   }
 
+  Future<String?> getSeeSoVersion() {
+    throw UnimplementedError('getSeeSoVersion() has not been implemented.');
+  }
 }
