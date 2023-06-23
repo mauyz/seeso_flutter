@@ -18,6 +18,9 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        flatDir {
+            dirs project(':seeso_flutter').file('libs')
+        }
     }
 }
 
@@ -48,8 +51,8 @@ android {
     dependencies {
         testImplementation 'org.jetbrains.kotlin:kotlin-test'
         testImplementation 'org.mockito:mockito-core:5.0.0'
-        implementation files('libs/gazetracker-release.aar')
-        implementation files('libs/libgaze-release.aar')
+        implementation (name: 'gazetracker-release',  ext: 'aar')
+        implementation (name: 'libgaze-release',  ext: 'aar')
     }
 
     testOptions {

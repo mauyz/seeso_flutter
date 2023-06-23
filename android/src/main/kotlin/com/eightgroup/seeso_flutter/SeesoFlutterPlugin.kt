@@ -18,7 +18,7 @@ class SeesoFlutterPlugin: FlutterPlugin, MethodCallHandler {
 
   override fun onMethodCall(call: MethodCall, result: Result) {
     when(call.method){
-      "getSeeSoVersion" -> GazeTracker.getVersionName()
+      "getSeeSoVersion" -> result.success(GazeTracker.getVersionName())
       else -> result.notImplemented()
     }
   }
